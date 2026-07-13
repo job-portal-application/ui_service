@@ -1,0 +1,29 @@
+name: Run all tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  sonarqube:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build Docker Image
+        run: docker build -t ui-service .
+
+      - name: Run Jest Tests inside Docker
+        run: docker run --rm -v $PWD/coverage:/app/coverage ui-service npm run coverage
+
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v4
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          
