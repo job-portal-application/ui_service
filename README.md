@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -75,3 +76,7 @@ export default defineConfig([
 ])
 
 ```
+=======
+# ui_service
+This is the frontend for the job portal application
+>>>>>>> bc485c6a6d8309c860fd2a24d4384a5f265e9510
