@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+# upload_service
+This repository contains the functionalities for uploading any type of files
+![CI](https://github.com/job-portal-application/upload_service/actions/workflows/test.yml/badge.svg)
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
