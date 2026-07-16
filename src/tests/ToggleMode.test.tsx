@@ -3,28 +3,27 @@ import userEvent from '@testing-library/user-event'
 import '@testing-library/jest-dom'
 import { ModeToggle } from '../components/ToggleMode'
 import { ThemeProvider } from '../components/ThemeProvider'
-import React from 'react'
+import React, { useState, createContext, useContext } from 'react'
 
-jest.mock('../../@/components/ui/dropdown-menu', () => {
-  const { useState, createContext, useContext } = require('react')
-  const Ctx = createContext({ open: false, toggle: () => {} })
-  const DropdownMenu = ({ children }: { children: React.ReactNode }) => {
+const Ctx = createContext({ open: false, toggle: () => {} })
+
+jest.mock('../../@/components/ui/dropdown-menu', () => ({
+  DropdownMenu: ({ children }: { children: React.ReactNode }) => {
     const [open, setOpen] = useState(false)
     return <Ctx.Provider value={{ open, toggle: () => setOpen((o: boolean) => !o) }}>{children}</Ctx.Provider>
-  }
-  const DropdownMenuTrigger = ({ children }: { children: React.ReactNode }) => {
+  },
+  DropdownMenuTrigger: ({ children }: { children: React.ReactNode }) => {
     const { toggle } = useContext(Ctx)
     return <button onClick={toggle}>{children}</button>
-  }
-  const DropdownMenuContent = ({ children }: { children: React.ReactNode }) => {
+  },
+  DropdownMenuContent: ({ children }: { children: React.ReactNode }) => {
     const { open } = useContext(Ctx)
     return open ? <div>{children}</div> : null
-  }
-  const DropdownMenuItem = ({ children, onClick }: { children: React.ReactNode; onClick?: () => void }) => (
+  },
+  DropdownMenuItem: ({ children, onClick }: { children: React.ReactNode; onClick?: () => void }) => (
     <button onClick={onClick}>{children}</button>
-  )
-  return { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem }
-})
+  ),
+}))
 
 const renderWithTheme = () =>
   render(
