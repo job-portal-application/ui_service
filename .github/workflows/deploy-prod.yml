@@ -24,4 +24,12 @@ jobs:
               run: npm run build
 
             - name: Build Docker Image
-              run: docker build -t ui-service:prod
+              run: docker build -t ui-service:prod .
+
+            - name: Start Docker container
+              run: | 
+                docker run -d --name ui-service-test -p 8080:80 ui-service:prod
+
+            - name: Verify conatiner is running
+              run: | 
+                docker ps
