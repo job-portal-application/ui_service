@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1784241176617" clover="3.2.0">
-  <project timestamp="1784241176617" name="All files">
+<coverage generated="1784242747294" clover="3.2.0">
+  <project timestamp="1784242747294" name="All files">
     <metrics statements="51" coveredstatements="51" conditionals="18" coveredconditionals="16" methods="14" coveredmethods="14" elements="83" coveredelements="81" complexity="0" loc="51" ncloc="51" packages="1" files="4" classes="4"/>
     <file name="Footer.tsx" path="C:\job_portal\ui_service\src\components\Footer.tsx">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>

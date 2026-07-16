@@ -8,4 +8,16 @@ RUN npm ci
 
 COPY . .
 
-CMD ["npm", "run", "coverage"]
+RUN npm run build
+
+FROM nginx:alpine
+
+RUN rm -rf /usr/share/nginx/html/*
+
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 5173
+
+CMD ["npm", "-g", "daemon off;"]
