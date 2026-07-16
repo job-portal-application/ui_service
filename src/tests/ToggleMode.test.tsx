@@ -14,7 +14,7 @@ jest.mock('../../@/components/ui/dropdown-menu', () => {
   }
   const DropdownMenuTrigger = ({ children }: { children: React.ReactNode }) => {
     const { toggle } = useContext(Ctx)
-    return <div onClick={toggle}>{children}</div>
+    return <button onClick={toggle}>{children}</button>
   }
   const DropdownMenuContent = ({ children }: { children: React.ReactNode }) => {
     const { open } = useContext(Ctx)

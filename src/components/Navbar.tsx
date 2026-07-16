@@ -52,13 +52,11 @@ const Navbar = () => {
           <div className='hidden md:flex items-center gap-3'>
             {
               isAuthenticated ? <Popover>
-                <PopoverTrigger>
-                  <button className='flex items-center gap-2 hover:opacity-80 transition-opacity'>
-                    <Avatar className='h-9 w-9 ring-2 ring-offset-2 ring-offset-background ring-blue-500/20 cursor-pointer hover:ring-blue-500/40 transition-all'>
-                      <AvatarImage src='' alt='User Avatar' />
-                      <AvatarFallback className='bg-blue-100 dark:bg-blue-900 text-blue-600'>S</AvatarFallback>
-                    </Avatar>
-                  </button>
+                <PopoverTrigger className='flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer bg-transparent border-none p-0'>
+                  <Avatar className='h-9 w-9 ring-2 ring-offset-2 ring-offset-background ring-blue-500/20 cursor-pointer hover:ring-blue-500/40 transition-all'>
+                    <AvatarImage src='' alt='User Avatar' />
+                    <AvatarFallback className='bg-blue-100 dark:bg-blue-900 text-blue-600'>S</AvatarFallback>
+                  </Avatar>
                 </PopoverTrigger>
                 <PopoverContent className='w-56 p-2' align='end'>
                   <div className='px-3 py-2 mb-2 boorder-b'>
