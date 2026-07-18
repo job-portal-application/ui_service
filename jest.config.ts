@@ -13,5 +13,7 @@ export default {
     'src/components/Footer.tsx',
     'src/components/Navbar.tsx',
     'src/components/ToggleMode.tsx',
+    'src/components/CareerGuidance.tsx',
+    'src/components/ResumeAnalyzer.tsx',
   ],
 }
