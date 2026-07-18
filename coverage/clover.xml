@@ -1,7 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1784254642653" clover="3.2.0">
-  <project timestamp="1784254642654" name="All files">
-    <metrics statements="51" coveredstatements="51" conditionals="18" coveredconditionals="16" methods="14" coveredmethods="14" elements="83" coveredelements="81" complexity="0" loc="51" ncloc="51" packages="1" files="4" classes="4"/>
+<coverage generated="1784343887331" clover="3.2.0">
+  <project timestamp="1784343887331" name="All files">
+    <metrics statements="166" coveredstatements="165" conditionals="68" coveredconditionals="65" methods="43" coveredmethods="42" elements="277" coveredelements="272" complexity="0" loc="166" ncloc="166" packages="1" files="6" classes="6"/>
+    <file name="CareerGuidance.tsx" path="C:\job_portal\ui_service\src\components\CareerGuidance.tsx">
+      <metrics statements="48" coveredstatements="48" conditionals="16" coveredconditionals="16" methods="14" coveredmethods="14"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="85" type="stmt"/>
+      <line num="13" count="85" type="stmt"/>
+      <line num="14" count="85" type="stmt"/>
+      <line num="15" count="85" type="stmt"/>
+      <line num="16" count="85" type="stmt"/>
+      <line num="18" count="85" type="stmt"/>
+      <line num="19" count="10" type="cond" truecount="4" falsecount="0"/>
+      <line num="20" count="8" type="stmt"/>
+      <line num="21" count="8" type="stmt"/>
+      <line num="25" count="85" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="29" count="85" type="stmt"/>
+      <line num="30" count="55" type="cond" truecount="2" falsecount="0"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="35" count="85" type="stmt"/>
+      <line num="36" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="37" count="1" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+      <line num="40" count="4" type="stmt"/>
+      <line num="41" count="4" type="stmt"/>
+      <line num="42" count="4" type="stmt"/>
+      <line num="48" count="3" type="stmt"/>
+      <line num="49" count="3" type="stmt"/>
+      <line num="51" count="1" type="stmt"/>
+      <line num="53" count="4" type="stmt"/>
+      <line num="57" count="85" type="stmt"/>
+      <line num="58" count="1" type="stmt"/>
+      <line num="59" count="1" type="stmt"/>
+      <line num="60" count="1" type="stmt"/>
+      <line num="61" count="1" type="stmt"/>
+      <line num="63" count="85" type="stmt"/>
+      <line num="95" count="53" type="stmt"/>
+      <line num="106" count="18" type="stmt"/>
+      <line num="108" count="1" type="stmt"/>
+      <line num="156" count="3" type="stmt"/>
+      <line num="180" count="3" type="stmt"/>
+      <line num="187" count="3" type="stmt"/>
+      <line num="211" count="6" type="stmt"/>
+      <line num="230" count="1" type="stmt"/>
+    </file>
     <file name="Footer.tsx" path="C:\job_portal\ui_service\src\components\Footer.tsx">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
@@ -27,6 +78,76 @@
       <line num="128" count="1" type="stmt"/>
       <line num="129" count="1" type="stmt"/>
       <line num="150" count="1" type="stmt"/>
+    </file>
+    <file name="ResumeAnalyzer.tsx" path="C:\job_portal\ui_service\src\components\ResumeAnalyzer.tsx">
+      <metrics statements="67" coveredstatements="66" conditionals="34" coveredconditionals="33" methods="15" coveredmethods="14"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="30" count="43" type="stmt"/>
+      <line num="31" count="43" type="stmt"/>
+      <line num="32" count="43" type="stmt"/>
+      <line num="33" count="43" type="stmt"/>
+      <line num="34" count="43" type="stmt"/>
+      <line num="35" count="43" type="stmt"/>
+      <line num="36" count="12" type="stmt"/>
+      <line num="37" count="12" type="cond" truecount="2" falsecount="0"/>
+      <line num="38" count="11" type="cond" truecount="2" falsecount="0"/>
+      <line num="40" count="1" type="stmt"/>
+      <line num="41" count="1" type="stmt"/>
+      <line num="43" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="45" count="1" type="stmt"/>
+      <line num="46" count="1" type="stmt"/>
+      <line num="48" count="9" type="stmt"/>
+      <line num="51" count="43" type="stmt"/>
+      <line num="52" count="8" type="stmt"/>
+      <line num="54" count="8" type="stmt"/>
+      <line num="55" count="8" type="stmt"/>
+      <line num="56" count="8" type="stmt"/>
+      <line num="57" count="8" type="stmt"/>
+      <line num="60" count="43" type="stmt"/>
+      <line num="61" count="9" type="cond" truecount="2" falsecount="0"/>
+      <line num="63" count="1" type="stmt"/>
+      <line num="64" count="1" type="stmt"/>
+      <line num="66" count="8" type="stmt"/>
+      <line num="67" count="8" type="stmt"/>
+      <line num="68" count="8" type="stmt"/>
+      <line num="69" count="8" type="stmt"/>
+      <line num="75" count="6" type="stmt"/>
+      <line num="77" count="6" type="stmt"/>
+      <line num="80" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="81" count="2" type="stmt"/>
+      <line num="83" count="8" type="stmt"/>
+      <line num="86" count="43" type="stmt"/>
+      <line num="87" count="1" type="stmt"/>
+      <line num="88" count="1" type="stmt"/>
+      <line num="89" count="1" type="stmt"/>
+      <line num="90" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="91" count="0" type="stmt"/>
+      <line num="94" count="43" type="stmt"/>
+      <line num="95" count="30" type="cond" truecount="2" falsecount="0"/>
+      <line num="96" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="97" count="5" type="stmt"/>
+      <line num="99" count="43" type="stmt"/>
+      <line num="100" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="101" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="102" count="1" type="stmt"/>
+      <line num="104" count="43" type="stmt"/>
+      <line num="105" count="18" type="cond" truecount="2" falsecount="0"/>
+      <line num="107" count="6" type="stmt"/>
+      <line num="108" count="12" type="cond" truecount="2" falsecount="0"/>
+      <line num="110" count="6" type="stmt"/>
+      <line num="112" count="6" type="stmt"/>
+      <line num="115" count="43" type="stmt"/>
+      <line num="158" count="1" type="stmt"/>
+      <line num="260" count="24" type="stmt"/>
+      <line num="290" count="12" type="stmt"/>
+      <line num="309" count="18" type="stmt"/>
+      <line num="360" count="1" type="stmt"/>
     </file>
     <file name="ThemeProvider.tsx" path="C:\job_portal\ui_service\src\components\ThemeProvider.tsx">
       <metrics statements="22" coveredstatements="22" conditionals="10" coveredconditionals="10" methods="5" coveredmethods="5"/>
