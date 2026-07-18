@@ -5,7 +5,7 @@ import Hero from '../assets/hero.png';
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden bg-secondary">
+    <section className="relative overflow-hidden bg-blue-100/30">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl">
 
