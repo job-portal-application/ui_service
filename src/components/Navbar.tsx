@@ -1,17 +1,38 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import Cookies from 'js-cookie';
 import { Button } from '../../@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '../../@/components/ui/avatar';
 import { Popover, PopoverTrigger, PopoverContent } from '../../@/components/ui/popover';
-import { Briefcase, Home, Info, LogOut, Menu, User, X } from 'lucide-react';
+import { Briefcase, Home, Info, LogOut, Menu, User, X, Loader2 } from 'lucide-react';
 import { ModeToggle } from '../components/ToggleMode';
+import { useAppDispatch, useAppSelector } from '../redux/hooks';
+import { logout } from '../redux/slices/authSlice';
+import { clearUser } from '../redux/slices/userSlice';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const isAuthenticated = true; // Replace with your authentication logic
+  const dispatch = useAppDispatch();
+  const [loggingOut, setLoggingOut] = useState(false);
+  const isAuthenticated = useAppSelector((state) => state.auth.isAuth);
+  const user = useAppSelector((state) => state.auth.user);
+  const initials = user?.name
+    ? user.name.trim().split(/\s+/).map((n: string) => n[0].toUpperCase()).slice(0, 2).join('')
+    : 'U';
   const handleLogout = () => {
-    // Implement your logout logic here
+    setLoggingOut(true);
+    // show spinner briefly, then perform the actual logout
+    setTimeout(() => {
+      Cookies.remove('token', { path: '/' });
+      Cookies.remove('name', { path: '/' });
+      Cookies.remove('email', { path: '/' });
+      localStorage.removeItem('hireheaven_user');
+      dispatch(logout());
+      dispatch(clearUser());
+      setLoggingOut(false);
+    }, 800);
   }
+
   const toggleMenu = () => {
     setOpen(!open);
   }
@@ -54,14 +75,21 @@ const Navbar = () => {
               isAuthenticated ? <Popover>
                 <PopoverTrigger className='flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer bg-transparent border-none p-0'>
                   <Avatar className='h-9 w-9 ring-2 ring-offset-2 ring-offset-background ring-blue-500/20 cursor-pointer hover:ring-blue-500/40 transition-all'>
-                    <AvatarImage src='' alt='User Avatar' />
-                    <AvatarFallback className='bg-blue-100 dark:bg-blue-900 text-blue-600'>S</AvatarFallback>
+                    <AvatarImage src={user? user.profile_pic as string : ""} alt={user ? user.name : ""} />
+                    <AvatarFallback className='bg-blue-100 dark:bg-blue-900 text-blue-600'>{initials}</AvatarFallback>
                   </Avatar>
                 </PopoverTrigger>
                 <PopoverContent className='w-56 p-2' align='end'>
                   <div className='px-3 py-2 mb-2 boorder-b'>
-                    <p className='text-sm font-semibold'>Suvam</p>
-                    <p className='text-xs opacity-60 truncate'>roysuvam1999@gmail.com</p>
+                    <p className='text-sm font-semibold'>{user?.name || 'User'}</p>
+                    <p className='text-xs opacity-60 truncate'>{user?.email || 'user@example.com'}</p>
+                    {user?.role && (
+                      <span className={`inline-block mt-1 text-xs font-medium px-2 py-0.5 rounded-2xl border ${
+                        user.role === 'recruiter'
+                          ? 'text-red-500 border-red-300 dark:border-red-800 font-bold'
+                          : 'text-blue-500 border-blue-3dark:border-blue-800 font-bold'
+                      }`}>{user.role.toUpperCase()}</span>
+                    )}
                   </div>
                   <Link to='/account'>
                     <Button variant={"ghost"} className='w-full justify-start gap-2'>
@@ -69,12 +97,12 @@ const Navbar = () => {
                       <span>My profile</span>
                     </Button>
                   </Link>
-                  <Button className='w-full justify-start gap-2 mt-1' variant={"destructive"} onClick={handleLogout}>
-                    <LogOut size={16} />
-                    <span>Logout</span>
+                  <Button className='w-full justify-start gap-2 mt-1' variant={"destructive"} onClick={handleLogout} disabled={loggingOut}>
+                    {loggingOut ? <Loader2 size={16} className='animate-spin' /> : <LogOut size={16} />}
+                    <span>{loggingOut ? 'Logging out' : 'Logout'}</span>
                   </Button>
                 </PopoverContent>
-              </Popover> : <Link to='/login'>
+              </Popover> : <Link to='/auth/signin'>
                 <Button variant={"default"} className='flex items-center gap-2 font-medium'>
                   <User size={16} />
                   <span>LOGIN</span>
@@ -125,15 +153,15 @@ const Navbar = () => {
                 </Button>
               </Link>
               <Button variant={"destructive"} className='w-full justify-start gap-3 h-11' onClick={() => {
-                handleLogout();
+                  handleLogout();
                 toggleMenu();
               }}>
-                <LogOut size={18} />
-                <span>Logout</span>
+                  {loggingOut ? <Loader2 size={18} className='animate-spin' /> : <LogOut size={18} />}
+                  <span>{loggingOut ? 'Logging out' : 'Logout'}</span>
               </Button>
             </>
             ) : (
-              <Link to='/login' onClick={toggleMenu}>
+              <Link to='/auth/signin' onClick={toggleMenu}>
                 <Button variant={"default"} className='w-full justify-start gap-3 h-11 mt-2'>
                   <User size={18} />
                   <span>LOGIN</span>
