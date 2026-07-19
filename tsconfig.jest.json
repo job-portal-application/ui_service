@@ -8,6 +8,6 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noEmit": false,
-    "types": ["jest", "node"]
+    "types": ["jest", "node", "@testing-library/jest-dom"]
   }
 }
