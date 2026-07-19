@@ -1,44 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1784447851788" clover="3.2.0">
-  <project timestamp="1784447851788" name="All files">
-    <metrics statements="317" coveredstatements="309" conditionals="121" coveredconditionals="109" methods="79" coveredmethods="77" elements="517" coveredelements="495" complexity="0" loc="317" ncloc="317" packages="5" files="13" classes="13"/>
-    <package name="src">
-      <metrics statements="30" coveredstatements="30" conditionals="2" coveredconditionals="1" methods="11" coveredmethods="11"/>
-      <file name="App.tsx" path="C:\job_portal\ui_service\src\App.tsx">
-        <metrics statements="30" coveredstatements="30" conditionals="2" coveredconditionals="1" methods="11" coveredmethods="11"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="15" count="32" type="stmt"/>
-        <line num="16" count="32" type="stmt"/>
-        <line num="17" count="80" type="stmt"/>
-        <line num="18" count="32" type="stmt"/>
-        <line num="20" count="32" type="stmt"/>
-        <line num="21" count="15" type="stmt"/>
-        <line num="22" count="15" type="stmt"/>
-        <line num="25" count="32" type="stmt"/>
-        <line num="26" count="15" type="stmt"/>
-        <line num="27" count="15" type="stmt"/>
-        <line num="28" count="15" type="stmt"/>
-        <line num="32" count="32" type="stmt"/>
-        <line num="33" count="15" type="stmt"/>
-        <line num="34" count="15" type="stmt"/>
-        <line num="35" count="15" type="stmt"/>
-        <line num="38" count="32" type="cond" truecount="1" falsecount="1"/>
-        <line num="40" count="32" type="stmt"/>
-        <line num="54" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.components">
+<coverage generated="1784447954974" clover="3.2.0">
+  <project timestamp="1784447954974" name="All files">
+    <metrics statements="287" coveredstatements="279" conditionals="119" coveredconditionals="108" methods="68" coveredmethods="66" elements="474" coveredelements="453" complexity="0" loc="287" ncloc="287" packages="4" files="12" classes="12"/>
+    <package name="components">
       <metrics statements="204" coveredstatements="196" conditionals="96" coveredconditionals="87" methods="53" coveredmethods="51"/>
       <file name="CareerGuidance.tsx" path="C:\job_portal\ui_service\src\components\CareerGuidance.tsx">
         <metrics statements="48" coveredstatements="48" conditionals="16" coveredconditionals="16" methods="14" coveredmethods="14"/>
@@ -233,24 +197,24 @@
       </file>
       <file name="ThemeProvider.tsx" path="C:\job_portal\ui_service\src\components\ThemeProvider.tsx">
         <metrics statements="22" coveredstatements="22" conditionals="10" coveredconditionals="10" methods="5" coveredmethods="5"/>
-        <line num="1" count="4" type="stmt"/>
-        <line num="16" count="4" type="stmt"/>
-        <line num="18" count="4" type="stmt"/>
-        <line num="24" count="55" type="stmt"/>
-        <line num="25" count="34" type="cond" truecount="2" falsecount="0"/>
-        <line num="28" count="55" type="stmt"/>
-        <line num="29" count="38" type="stmt"/>
-        <line num="31" count="38" type="stmt"/>
-        <line num="33" count="38" type="cond" truecount="2" falsecount="0"/>
-        <line num="34" count="30" type="cond" truecount="2" falsecount="0"/>
-        <line num="39" count="30" type="stmt"/>
-        <line num="40" count="30" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="24" count="23" type="stmt"/>
+        <line num="25" count="19" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="23" type="stmt"/>
+        <line num="29" count="23" type="stmt"/>
+        <line num="31" count="23" type="stmt"/>
+        <line num="33" count="23" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="39" count="15" type="stmt"/>
+        <line num="40" count="15" type="stmt"/>
         <line num="43" count="8" type="stmt"/>
-        <line num="46" count="55" type="stmt"/>
+        <line num="46" count="23" type="stmt"/>
         <line num="49" count="5" type="stmt"/>
         <line num="50" count="5" type="stmt"/>
-        <line num="54" count="55" type="stmt"/>
-        <line num="61" count="4" type="stmt"/>
+        <line num="54" count="23" type="stmt"/>
+        <line num="61" count="3" type="stmt"/>
         <line num="62" count="45" type="stmt"/>
         <line num="64" count="44" type="cond" truecount="2" falsecount="0"/>
         <line num="65" count="2" type="stmt"/>
@@ -269,7 +233,7 @@
         <line num="28" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="src.pages.Authentication">
+    <package name="pages.Authentication">
       <metrics statements="66" coveredstatements="66" conditionals="21" coveredconditionals="19" methods="10" coveredmethods="10"/>
       <file name="SignupPage.tsx" path="C:\job_portal\ui_service\src\pages\Authentication\SignupPage.tsx">
         <metrics statements="66" coveredstatements="66" conditionals="21" coveredconditionals="19" methods="10" coveredmethods="10"/>
@@ -341,36 +305,36 @@
         <line num="182" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="src.redux">
+    <package name="redux">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="hooks.ts" path="C:\job_portal\ui_service\src\redux\hooks.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="5" count="478" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="5" count="446" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
       </file>
     </package>
-    <package name="src.redux.slices">
+    <package name="redux.slices">
       <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
       <file name="loaderSlice.ts" path="C:\job_portal\ui_service\src\redux\slices\loaderSlice.ts">
         <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <line num="2" count="5" type="stmt"/>
-        <line num="4" count="5" type="stmt"/>
-        <line num="9" count="36" type="stmt"/>
-        <line num="10" count="36" type="cond" truecount="2" falsecount="0"/>
-        <line num="13" count="10" type="stmt"/>
-        <line num="18" count="5" type="stmt"/>
-        <line num="19" count="5" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
       </file>
       <file name="userSlice.ts" path="C:\job_portal\ui_service\src\redux\slices\userSlice.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="7" type="stmt"/>
-        <line num="8" count="7" type="stmt"/>
-        <line num="12" count="7" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
         <line num="17" count="14" type="stmt"/>
         <line num="20" count="2" type="stmt"/>
-        <line num="25" count="7" type="stmt"/>
-        <line num="27" count="7" type="stmt"/>
+        <line num="25" count="6" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
       </file>
     </package>
   </project>
