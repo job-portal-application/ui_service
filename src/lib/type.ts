@@ -75,3 +75,8 @@ export interface User {
     skills: string[];
     subscription: string | null;
 }
+
+export interface AccountProps {
+    user: User | null;
+    isYourAccount: boolean;
+}
