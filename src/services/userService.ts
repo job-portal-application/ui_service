@@ -83,10 +83,11 @@ export const updateProfile = async(phoneNumber: string, bio: string, id: number)
 export const addSkills = async(skill: string) => {
     setBtnLoading(true);
     try {
-        const { data } = await axios.post(`${env.userServiceBaseUrl}/api/v1/users/skills/add`, {skill}, {
+        const token = Cookies.get('token');
+        await axios.post(`${env.userServiceBaseUrl}/api/v1/users/skills/add`, {skill}, {
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: `Bearer ${Cookies.get('token')}`,
+                Authorization: `Bearer ${token}`,
             }
         });
         toast.success('Skill added successfully.');
