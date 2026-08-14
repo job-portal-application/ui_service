@@ -2,17 +2,50 @@ import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import '@testing-library/jest-dom'
 import { MemoryRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { configureStore } from '@reduxjs/toolkit'
 import { ThemeProvider } from '../components/ThemeProvider'
 import Navbar from '../components/Navbar'
+import authReducer from '../redux/slices/authSlice'
 
-const renderNavbar = () =>
-  render(
-    <MemoryRouter>
-      <ThemeProvider>
-        <Navbar />
-      </ThemeProvider>
-    </MemoryRouter>
+const renderNavbar = () => {
+  const store = configureStore({
+    reducer: {
+      auth: authReducer,
+    },
+    preloadedState: {
+      auth: {
+        user: {
+          user_id: 1,
+          name: 'Suvam',
+          email: 'roysuvam1999@gmail.com',
+          phone_number: '1234567890',
+          role: 'jobseeker' as const,
+          bio: null,
+          resume: null,
+          resume_public_id: null,
+          profile_pic: null,
+          profile_pic_public_id: null,
+          skills: [],
+          subscription: null,
+        },
+        loading: false,
+        btnLoading: false,
+        isAuth: true,
+      },
+    },
+  })
+
+  return render(
+    <Provider store={store}>
+      <MemoryRouter>
+        <ThemeProvider>
+          <Navbar />
+        </ThemeProvider>
+      </MemoryRouter>
+    </Provider>
   )
+}
 
 beforeEach(() => {
   window.matchMedia = jest.fn().mockReturnValue({ matches: false })
